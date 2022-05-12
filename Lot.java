@@ -3,7 +3,7 @@ package pkgParkingReservation;
 public class Lot {
 	
 	private int lotnum;
-	private int[] spotnum;
+	private int spotnum;
 	private String lotname;
 	private int capacity;
 	private int hancapspaces;
@@ -11,17 +11,17 @@ public class Lot {
 	public Lot() {
 		super();
 		this.lotnum = 0;
-		//this.spotnum = 0; FIX THIS
+		this.spotnum = 0;
 		this.lotname = "";
 		this.capacity = 0;
 		this.hancapspaces = 0;
 	}
 	
 	
-	public Lot(int lotnum, int[] spotnum, String lotname, int capacity, int hancapspaces) {
+	public Lot(int lotnum, int spotnum, String lotname, int capacity, int hancapspaces) {
 		super();
 		this.lotnum = lotnum;
-		//this.spotnum = 0; FIX THIS
+		this.spotnum = 0;
 		this.lotname = lotname;
 		this.capacity = capacity;
 		this.hancapspaces = hancapspaces;
@@ -36,12 +36,12 @@ public class Lot {
 	}
 	
 	
-	/**public int getSpotNum(int spotnum) {
+	public int getSpotNum() {
 		return spotnum;
 	}
 	public void setSpotNum(int spotnum) {
 		this.spotnum = spotnum;
-	}**/
+	}
 	
 	
 	public String getLotName() {
