@@ -21,7 +21,7 @@ public class Lot {
 	public Lot(int lotnum, int spotnum, String lotname, int capacity, int hancapspaces) {
 		super();
 		this.lotnum = lotnum;
-		this.spotnum = 0;
+		this.spotnum = spotnum;
 		this.lotname = lotname;
 		this.capacity = capacity;
 		this.hancapspaces = hancapspaces;
