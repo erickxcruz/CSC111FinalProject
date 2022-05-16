@@ -23,16 +23,24 @@ public class Reservation {
 	int selstdnt; // student index
 	
 	
-	//Loading Customer Data
+	Reservation()
+	{
+		STDNTSIZE = 3;
+		students = new Permit[3];
+		selstdnt = -1; // index of the customer logged in
+		si = -1;
+	}
+	
+	
 	/****************************************Load Customers
 	 * @throws FileNotFoundException **********************************/
-	void loadCustomers() throws FileNotFoundException
+	void loadAccounts() throws FileNotFoundException
 	{
 
 			//Working variables
-			 FileReader custfile = new FileReader("customers.dat");
-			 Scanner fileReader = new Scanner(custfile);
-				//public Customer(int custid, String fullname, String user, String password) {	
+			 FileReader acctfile = new FileReader("ReservationAccounts.dat");
+			 Scanner fileReader = new Scanner(acctfile);
+				//public Customer(int permitid, String fullname, String user, String password) {	
 			 //create the variables for the file
 			 short i = 0; 		//index for the array
 			 int permitid = 0;
@@ -57,7 +65,7 @@ public class Reservation {
 			 }//end of reading the file
 			 fileReader.close();
 			 
-			 System.out.println("Customers Loaded");
+			 System.out.println("Accounts Loaded");
 	} 
 				
 	/****************************************End of Load Customers***************************/
@@ -112,4 +120,3 @@ boolean login()
 
 
 }
-
